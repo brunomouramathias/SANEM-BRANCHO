@@ -8,6 +8,9 @@ const Sidebar = () => {
     { to: "/", label: "Início", icon: "🏠" },
     { to: "/estoque", label: "Estoque", icon: "📦" },
     { to: "/doacao", label: "Doação", icon: "❤️" },
+    { to: "/beneficiarios", label: "Beneficiários", icon: "👥" },
+    { to: "/movimentos", label: "Movimentos", icon: "📋" },
+    { to: "/relatorios", label: "Relatórios", icon: "📊" },
   ];
 
   return (

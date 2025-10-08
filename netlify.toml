@@ -1,0 +1,32 @@
+# Configuração do Netlify para React + Vite
+
+[build]
+  # Diretório onde estão os arquivos do projeto
+  base = "/"
+  
+  # Comando para build da aplicação
+  command = "npm run build"
+  
+  # Diretório onde ficam os arquivos após o build
+  publish = "dist"
+
+# Configurações para SPA (Single Page Application)
+# Redireciona todas as rotas para index.html
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Configurações de ambiente (opcional)
+[build.environment]
+  NODE_VERSION = "18"
+
+# Headers de segurança (opcional mas recomendado)
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "no-referrer-when-downgrade"
+

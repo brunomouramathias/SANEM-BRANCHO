@@ -8,19 +8,18 @@
   display: flex;
   flex-direction: column;
   background: rgb(255, 255, 255);
-  /* Parte branca */
   max-height: 100%;
   font-family: 'Inter', sans-serif;
   padding: 0;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
 }
 
 .sidebar-nav {
   display: flex;
   flex-direction: column;
   padding: 1rem;
-  gap: 30px;
+  gap: 15px;
 }
-
 
 /* Cabeçalho da sidebar */
 .sidebar-header {
@@ -53,7 +52,7 @@
   text-decoration: none;
   cursor: pointer;
   transition: background 0.2s, color 0.2s, border 0.2s;
-  height: 2rem;
+  min-height: 3rem;
 }
 
 .nav-button .icon {
@@ -75,8 +74,6 @@
   border: none;
 }
 
-
-
 .btn-registrar {
   background: #3b0000;
   color: white;
@@ -85,4 +82,81 @@
   padding: 0.6rem 1.4rem;
   border-radius: 10px;
   cursor: pointer;
+}
+
+/* Responsividade para Tablets e Mobile */
+@media (max-width: 1024px) {
+  .sidebar {
+    width: 250px;
+  }
+
+  .sidebar-header {
+    font-size: 40px;
+  }
+
+  .nav-button {
+    font-size: 14px;
+  }
+
+  .nav-button .icon {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .estoque-container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    max-height: none;
+    position: relative;
+  }
+
+  .sidebar-header {
+    font-size: 32px;
+    padding: 1rem;
+  }
+
+  .sidebar-nav {
+    flex-direction: row;
+    overflow-x: auto;
+    padding: 0.5rem;
+    gap: 10px;
+  }
+
+  .nav-button {
+    min-width: 120px;
+    justify-content: flex-start;
+    padding: 0.6rem 0.8rem;
+    font-size: 13px;
+  }
+
+  .nav-button .icon {
+    position: relative;
+    left: 0;
+    margin-right: 8px;
+    font-size: 16px;
+  }
+
+  .nav-button .label {
+    margin: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .sidebar-header {
+    font-size: 24px;
+  }
+
+  .sidebar-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .nav-button {
+    min-width: calc(50% - 10px);
+    font-size: 12px;
+  }
 }
