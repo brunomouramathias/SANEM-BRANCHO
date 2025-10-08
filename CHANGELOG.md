@@ -4,6 +4,76 @@ Todas as mudanças importantes do projeto serão documentadas aqui.
 
 ---
 
+## [08/10/2025] - Breakpoints Responsivos Profissionais
+
+### ✅ Adicionado
+
+#### 📱 Sistema de Responsividade com 3 Breakpoints
+- **Desktop (> 1024px)**
+  - Layout lado a lado (50% logo + 50% formulário)
+  - Logo SANEM: 120px
+  - Card máximo: 420px
+  - Padding completo: 3rem
+  
+- **Tablet (481px - 1024px)**
+  - Layout em coluna (logo no topo)
+  - Logo SANEM: 80px
+  - Card máximo: 500px
+  - Padding médio: 2.5rem
+  - Altura mínima da logo: 250px
+  
+- **Mobile (≤ 480px)**
+  - Layout compacto em coluna
+  - Logo SANEM: 50px
+  - Card: 100% largura
+  - Padding reduzido: 2rem
+  - Inputs touch-friendly (0.9rem)
+  - Altura mínima da logo: 180px
+  
+- **Extra Small (≤ 360px)**
+  - Layout ultra compacto
+  - Logo SANEM: 40px
+  - Padding mínimo: 1.5rem
+  - Inputs menores (0.8rem)
+
+#### ✨ Melhorias Visuais
+- **Animações CSS**
+  - Shake para mensagens de erro
+  - SlideDown para mensagem de sucesso
+  - Transições suaves em todos os elementos
+  
+- **Efeitos Interativos**
+  - Botões com efeito hover (elevação + sombra)
+  - Estados de foco profissionais
+  - Box-shadow em inputs focados
+  - Mudança de cor de fundo ao focar
+  
+- **Design Melhorado**
+  - Bordas arredondadas (8px)
+  - Sombras suaves e modernas
+  - Cores de destaque (#3b0000)
+  - Gradientes no fundo
+
+#### 📚 Documentação
+- `BREAKPOINTS_RESPONSIVOS.md` criado com:
+  - Guia completo dos 4 breakpoints
+  - Tabelas comparativas de medidas
+  - Diagramas visuais ASCII
+  - Como testar no DevTools
+  - Checklist de responsividade
+
+### 🔄 Modificado
+
+#### Arquivos Atualizados
+- `src/pages/Auth/Login.css` - Completa reestruturação
+- `src/pages/Auth/Cadastro.css` - Completa reestruturação
+
+### 📦 Commits
+- `feat: Implementa 3 breakpoints responsivos` (de10e43)
+- `docs: Adiciona documentacao completa dos breakpoints` (d3336e4)
+
+---
+
 ## [08/10/2025] - Sistema de Autenticação + Ícones + Correções
 
 ### ✅ Adicionado
