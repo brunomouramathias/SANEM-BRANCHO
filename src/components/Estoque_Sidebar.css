@@ -84,6 +84,18 @@
   cursor: pointer;
 }
 
+.logout-button {
+  margin-top: auto;
+  background-color: transparent !important;
+  border: 1px solid #dc3545 !important;
+  color: #dc3545 !important;
+}
+
+.logout-button:hover {
+  background-color: #dc3545 !important;
+  color: white !important;
+}
+
 /* Responsividade para Tablets e Mobile */
 @media (max-width: 1024px) {
   .sidebar {

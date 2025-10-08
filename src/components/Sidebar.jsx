@@ -1,8 +1,9 @@
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import "./Estoque_Sidebar.css";
 
 const Sidebar = () => {
   const location = useLocation();
+  const navigate = useNavigate();
 
   const navItems = [
     { to: "/", label: "Início", icon: "🏠" },
@@ -12,6 +13,13 @@ const Sidebar = () => {
     { to: "/movimentos", label: "Movimentos", icon: "📋" },
     { to: "/relatorios", label: "Relatórios", icon: "📊" },
   ];
+
+  const handleLogout = () => {
+    if (window.confirm("Deseja realmente sair?")) {
+      localStorage.removeItem("usuarioLogado");
+      navigate("/login");
+    }
+  };
 
   return (
     <div className="sidebar">
@@ -29,6 +37,11 @@ const Sidebar = () => {
             <span className="label">{item.label}</span>
           </Link>
         ))}
+        
+        <button onClick={handleLogout} className="nav-button logout-button">
+          <span className="icon">🚪</span>
+          <span className="label">Sair</span>
+        </button>
       </nav>
     </div>
   );

@@ -49,8 +49,8 @@ const CriarMovimento = () => {
     try {
       const dataToSend = {
         tipo: formData.tipo,
-        idVoluntario: formData.idvoluntario || null,
-        idBeneficiario: formData.idbeneficiario || null
+        idvoluntario: formData.idvoluntario ? parseInt(formData.idvoluntario) : null,
+        idbeneficiario: formData.idbeneficiario ? parseInt(formData.idbeneficiario) : null
       };
 
       await api.post("/movimento", dataToSend);

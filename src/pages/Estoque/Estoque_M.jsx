@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 import Sidebar from "../../components/Sidebar";
 import api from "../../services/api";
+import { getIconeRoupa, getCategoriaColor } from "../../utils/iconesRoupas";
 import "./style.css";
 
 const Estoque = () => {
@@ -101,7 +102,11 @@ const Estoque = () => {
         ) : (
           <div className="grid">
             {itensFiltrados.map((item) => (
-              <div key={item.iditem} className="item-card">
+              <div 
+                key={item.iditem} 
+                className="item-card"
+                style={{ borderTopColor: getCategoriaColor(item.tipo), borderTopWidth: '4px', borderTopStyle: 'solid' }}
+              >
                 <button
                   className="btn-excluir"
                   onClick={() => {
@@ -111,9 +116,12 @@ const Estoque = () => {
                 >
                   ❌
                 </button>
+                <div className="item-icon" style={{ fontSize: '60px', margin: '10px 0' }}>
+                  {getIconeRoupa(item.tipo)}
+                </div>
                 <h3>{item.tipo}</h3>
                 <p>
-                  <strong>Tamanho:</strong> {item.tamanho}
+                  <strong>Tam:</strong> {item.tamanho}
                 </p>
                 <p>
                   <strong>Quantidade:</strong> {item.quantidade}
