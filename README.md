@@ -89,7 +89,7 @@ DATABASE_PASSWORD=Admin123
 
 ## 🧑‍💻 Contribuindo
 
-Apenas membros da equipe BRANCHó podem contribuir nesse projeto. Entretanto, possivelmente outra equipe do próximo semestre também contribuirá.
+Apenas membros da equipe BRANCHÓ podem contribuir nesse projeto. Entretanto, possivelmente outra equipe do próximo semestre também contribuirá.
 
 ---
 
