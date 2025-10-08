@@ -1,4 +1,4 @@
-# 📦 BRANCHó
+# 📦 BRANCHÓ
 
 Um sistema de gerenciamento de estoque feito com Express e React. 
 
