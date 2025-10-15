@@ -7,13 +7,13 @@
   --color-primary: #3b0400;
   --color-primary-hover: #5a0600;
   --color-primary-active: #2a0300;
-  
+
   /* Cores de feedback */
   --color-error: #dc2626;
   --color-error-bg: #fef2f2;
   --color-error-border: #fecaca;
   --color-success: #16a34a;
-  
+
   /* Cores neutras */
   --color-text-primary: #111827;
   --color-text-secondary: #6b7280;
@@ -23,7 +23,7 @@
   --color-bg-input: #ffffff;
   --color-bg-disabled: #f3f4f6;
   --color-bg-page: #f9fafb;
-  
+
   /* Tipografia */
   --font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   --font-size-base: 16px;
@@ -33,7 +33,7 @@
   --font-size-2xl: 2rem;
   --line-height-base: 1.5;
   --line-height-tight: 1.25;
-  
+
   /* Espaçamentos */
   --spacing-xs: 0.25rem;
   --spacing-sm: 0.5rem;
@@ -41,13 +41,13 @@
   --spacing-lg: 1.5rem;
   --spacing-xl: 2rem;
   --spacing-2xl: 3rem;
-  
+
   /* Dimensões */
   --input-height: 44px;
   --button-height: 48px;
   --border-radius: 0.5rem;
   --max-width-form: 420px;
-  
+
   /* Sombras */
   --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
   --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
@@ -532,11 +532,11 @@
   .login-form-section {
     padding: var(--spacing-2xl) var(--spacing-xl);
   }
-  
+
   .login-title {
     font-size: var(--font-size-2xl);
   }
-  
+
   .login-card {
     padding: var(--spacing-2xl);
   }
@@ -549,18 +549,19 @@
 @media (min-width: 1024px) {
   .login-container {
     flex-direction: row;
+    height: 100dvh;
+    overflow: hidden;
   }
-  
-  /* Seção de imagem - visível no desktop */
+
+  /* Seção de imagem - visível no desktop - EXATAMENTE 50% */
   .login-image-section {
     display: flex;
-    flex: 1;
+    flex: 0 0 50%;
+    width: 50%;
     min-height: 100dvh;
-    max-width: 50%;
     background: linear-gradient(rgba(59, 4, 0, 0.65), rgba(59, 4, 0, 0.65)),
                 url('https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?w=1200&q=80') center/cover no-repeat;
-    position: sticky;
-    top: 0;
+    position: relative;
   }
   
   .login-image-overlay {
@@ -570,7 +571,7 @@
     width: 100%;
     height: 100%;
   }
-  
+
   .login-brand {
     font-size: clamp(3rem, 8vw, 7rem);
     font-weight: 800;
@@ -580,13 +581,20 @@
     text-transform: uppercase;
     margin: 0;
   }
-  
-  /* Seção do formulário */
+
+  /* Seção do formulário - EXATAMENTE 50% */
   .login-form-section {
-    flex: 1;
-    max-width: 50%;
+    flex: 0 0 50%;
+    width: 50%;
+    overflow-y: auto;
+    height: 100dvh;
   }
-  
+
+  .login-form-wrapper {
+    max-width: 480px;
+    padding: var(--spacing-xl);
+  }
+
   /* Ocultar brand mobile */
   .login-brand-mobile {
     display: none;
@@ -599,7 +607,7 @@
 
 @media (min-width: 1440px) {
   .login-form-wrapper {
-    max-width: 480px;
+    max-width: 500px;
   }
 }
 
@@ -625,12 +633,12 @@
   .form-input {
     border-width: 2px;
   }
-  
+
   .form-input:focus {
     outline: 3px solid var(--color-border-focus);
     outline-offset: 2px;
   }
-  
+
   .btn-primary:focus {
     outline-width: 3px;
   }
