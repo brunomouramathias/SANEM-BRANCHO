@@ -23,42 +23,43 @@
 :root {
   /* === CORES PRINCIPAIS === */
   /* Baseado em pesquisa de cores para organizações humanitárias */
+  /* Inspiração: Goodwill, Salvation Army, tons neutros e acolhedores */
   
-  /* Primary: Azul confiável e acolhedor */
-  --color-primary-50: #E3F2FD;
-  --color-primary-100: #BBDEFB;
-  --color-primary-200: #90CAF9;
-  --color-primary-300: #64B5F6;
-  --color-primary-400: #42A5F5;
-  --color-primary-500: #2196F3;   /* Principal */
-  --color-primary-600: #1E88E5;
-  --color-primary-700: #1976D2;
-  --color-primary-800: #1565C0;
-  --color-primary-900: #0D47A1;
+  /* Primary: Terracota/Bege Acolhedor */
+  --color-primary-50: #FFF9F0;
+  --color-primary-100: #FFF5EB;
+  --color-primary-200: #FFE8D6;
+  --color-primary-300: #FFD4B0;
+  --color-primary-400: #E6B88A;
+  --color-primary-500: #C89563;   /* Principal - Terracota */
+  --color-primary-600: #B57F4F;
+  --color-primary-700: #9A6A42;
+  --color-primary-800: #7F5636;
+  --color-primary-900: #5C3F26;
   
-  /* Secondary: Verde solidariedade */
-  --color-secondary-50: #E8F5E9;
-  --color-secondary-100: #C8E6C9;
-  --color-secondary-200: #A5D6A7;
-  --color-secondary-300: #81C784;
-  --color-secondary-400: #66BB6A;
-  --color-secondary-500: #4CAF50;   /* Principal */
-  --color-secondary-600: #43A047;
-  --color-secondary-700: #388E3C;
-  --color-secondary-800: #2E7D32;
-  --color-secondary-900: #1B5E20;
+  /* Secondary: Verde-oliva Natural */
+  --color-secondary-50: #F5F7F6;
+  --color-secondary-100: #EBF0ED;
+  --color-secondary-200: #D6E0DA;
+  --color-secondary-300: #B8C9BE;
+  --color-secondary-400: #98B29F;
+  --color-secondary-500: #7BA05B;   /* Principal - Verde-oliva */
+  --color-secondary-600: #6A8D4F;
+  --color-secondary-700: #597743;
+  --color-secondary-800: #486137;
+  --color-secondary-900: #374A2A;
   
-  /* Accent: Laranja acolhedor */
-  --color-accent-50: #FFF3E0;
-  --color-accent-100: #FFE0B2;
-  --color-accent-200: #FFCC80;
-  --color-accent-300: #FFB74D;
-  --color-accent-400: #FFA726;
-  --color-accent-500: #FF9800;     /* Principal */
-  --color-accent-600: #FB8C00;
-  --color-accent-700: #F57C00;
-  --color-accent-800: #EF6C00;
-  --color-accent-900: #E65100;
+  /* Accent: Bege Dourado Suave */
+  --color-accent-50: #FAFAF8;
+  --color-accent-100: #F5F1ED;
+  --color-accent-200: #EBE4DC;
+  --color-accent-300: #DED2C4;
+  --color-accent-400: #CFBFAC;
+  --color-accent-500: #D4A574;     /* Principal - Bege Dourado */
+  --color-accent-600: #C19560;
+  --color-accent-700: #A8804F;
+  --color-accent-800: #8F6C40;
+  --color-accent-900: #6F5432;
   
   /* === CORES NEUTRAS === */
   --color-white: #FFFFFF;
