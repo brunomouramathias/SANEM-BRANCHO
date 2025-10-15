@@ -1,9 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
-import ProtectedRoute from "./components/ProtectedRoute";
-
-// Páginas de autenticação
-import Login from "./pages/Auth/Login";
-import Cadastro from "./pages/Auth/Cadastro";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 // Páginas principais
 import Home from "./pages/Home/index";
@@ -29,74 +24,27 @@ export function AppRoutes() {
   return (
     <Router>
       <Routes>
-        {/* Rotas públicas */}
-        <Route path="/login" element={<Login />} />
-        <Route path="/cadastro" element={<Cadastro />} />
+        {/* Página inicial */}
+        <Route path="/" element={<Home />} />
 
-        {/* Rotas protegidas */}
-        <Route path="/" element={
-          <ProtectedRoute>
-            <Home />
-          </ProtectedRoute>
-        } />
-        
-        <Route path="/estoque" element={
-          <ProtectedRoute>
-            <Estoque />
-          </ProtectedRoute>
-        } />
-        
-        <Route path="/criarItem" element={
-          <ProtectedRoute>
-            <CriarItem />
-          </ProtectedRoute>
-        } />
+        {/* Rotas de estoque */}
+        <Route path="/estoque" element={<Estoque />} />
+        <Route path="/criarItem" element={<CriarItem />} />
 
         {/* Rotas de doações */}
-        <Route path="/doacao" element={
-          <ProtectedRoute>
-            <Doacoes />
-          </ProtectedRoute>
-        } />
-        
-        <Route path="/criarDoacao" element={
-          <ProtectedRoute>
-            <CriarDoacao />
-          </ProtectedRoute>
-        } />
+        <Route path="/doacao" element={<Doacoes />} />
+        <Route path="/criarDoacao" element={<CriarDoacao />} />
 
         {/* Rotas de beneficiários */}
-        <Route path="/beneficiarios" element={
-          <ProtectedRoute>
-            <Beneficiarios />
-          </ProtectedRoute>
-        } />
-        
-        <Route path="/criarBeneficiario" element={
-          <ProtectedRoute>
-            <CriarBeneficiario />
-          </ProtectedRoute>
-        } />
+        <Route path="/beneficiarios" element={<Beneficiarios />} />
+        <Route path="/criarBeneficiario" element={<CriarBeneficiario />} />
 
         {/* Rotas de movimentos */}
-        <Route path="/movimentos" element={
-          <ProtectedRoute>
-            <Movimentos />
-          </ProtectedRoute>
-        } />
-        
-        <Route path="/criarMovimento" element={
-          <ProtectedRoute>
-            <CriarMovimento />
-          </ProtectedRoute>
-        } />
+        <Route path="/movimentos" element={<Movimentos />} />
+        <Route path="/criarMovimento" element={<CriarMovimento />} />
 
         {/* Rota de relatórios */}
-        <Route path="/relatorios" element={
-          <ProtectedRoute>
-            <Relatorios />
-          </ProtectedRoute>
-        } />
+        <Route path="/relatorios" element={<Relatorios />} />
       </Routes>
     </Router>
   );
