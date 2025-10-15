@@ -1,346 +1,672 @@
 /* ================================================
-   LOGIN - ESTILO BASE (DESKTOP)
+   DESIGN SYSTEM - VARIÁVEIS CSS
    ================================================ */
+
+:root {
+  /* Cores principais */
+  --color-primary: #3b0400;
+  --color-primary-hover: #5a0600;
+  --color-primary-active: #2a0300;
+  
+  /* Cores de feedback */
+  --color-error: #dc2626;
+  --color-error-bg: #fef2f2;
+  --color-error-border: #fecaca;
+  --color-success: #16a34a;
+  
+  /* Cores neutras */
+  --color-text-primary: #111827;
+  --color-text-secondary: #6b7280;
+  --color-text-disabled: #9ca3af;
+  --color-border: #d1d5db;
+  --color-border-focus: var(--color-primary);
+  --color-bg-input: #ffffff;
+  --color-bg-disabled: #f3f4f6;
+  --color-bg-page: #f9fafb;
+  
+  /* Tipografia */
+  --font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  --font-size-base: 16px;
+  --font-size-sm: 0.875rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.5rem;
+  --font-size-2xl: 2rem;
+  --line-height-base: 1.5;
+  --line-height-tight: 1.25;
+  
+  /* Espaçamentos */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-2xl: 3rem;
+  
+  /* Dimensões */
+  --input-height: 44px;
+  --button-height: 48px;
+  --border-radius: 0.5rem;
+  --max-width-form: 420px;
+  
+  /* Sombras */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-focus: 0 0 0 3px rgba(59, 4, 0, 0.1);
+  
+  /* Transições */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-base: 200ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ================================================
+   RESET E BASE
+   ================================================ */
+
+* {
+  box-sizing: border-box;
+}
+
+/* ================================================
+   LAYOUT PRINCIPAL - MOBILE FIRST
+   ================================================ */
+
+.login-page {
+  min-height: 100dvh;
+  background-color: var(--color-bg-page);
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  color: var(--color-text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
 .login-container {
   display: flex;
-  min-height: 100vh;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-}
-
-.login-left {
-  flex: 1;
-  background: linear-gradient(rgba(59, 4, 0, 0.7), rgba(59, 4, 0, 0.7)),
-              url('https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?w=1200') center/cover;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  min-width: 50%;
-}
-
-.logo-sanem {
-  font-size: 120px;
-  font-weight: bold;
-  color: white;
-  text-shadow: 3px 3px 6px rgba(0,0,0,0.6);
-  letter-spacing: 2px;
-}
-
-.login-right {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #f5f5f5;
-  padding: 3rem;
-  min-width: 50%;
-}
-
-.login-content {
-  width: 100%;
-  max-width: 500px;
-  display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 2rem;
+  min-height: 100dvh;
+  width: 100%;
 }
 
-.titulo-boas-vindas {
-  font-size: 2.5rem;
-  font-weight: bold;
-  color: #000;
-  text-align: center;
-  margin: 0;
-  line-height: 1.2;
+/* ================================================
+   SEÇÃO DE IMAGEM - OCULTA NO MOBILE
+   ================================================ */
+
+.login-image-section {
+  display: none;
 }
+
+/* ================================================
+   SEÇÃO DO FORMULÁRIO
+   ================================================ */
+
+.login-form-section {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-lg) var(--spacing-md);
+  width: 100%;
+}
+
+.login-form-wrapper {
+  width: 100%;
+  max-width: var(--max-width-form);
+  margin-inline: auto;
+}
+
+/* ================================================
+   HEADER
+   ================================================ */
+
+.login-header {
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+}
+
+.login-title {
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  line-height: var(--line-height-tight);
+  color: var(--color-text-primary);
+  margin: 0 0 var(--spacing-sm);
+}
+
+.login-subtitle {
+  font-size: var(--font-size-base);
+  color: var(--color-text-secondary);
+  margin: 0;
+  font-weight: 400;
+}
+
+/* ================================================
+   CARD DO FORMULÁRIO
+   ================================================ */
 
 .login-card {
   background: white;
-  padding: 3rem 2.5rem;
-  border-radius: 12px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  border-radius: var(--border-radius);
+  padding: var(--spacing-xl);
+  box-shadow: var(--shadow-md);
   width: 100%;
 }
 
-.titulo-login {
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin-bottom: 2rem;
-  color: #333;
-  text-align: left;
+/* ================================================
+   ALERTAS
+   ================================================ */
+
+.alert {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-sm);
+  padding: 0.875rem var(--spacing-md);
+  border-radius: var(--border-radius);
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-base);
+  margin-bottom: var(--spacing-lg);
+  animation: slideDown var(--transition-base);
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-0.5rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.alert-error {
+  background-color: var(--color-error-bg);
+  color: var(--color-error);
+  border: 1px solid var(--color-error-border);
+}
+
+.alert-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  flex-shrink: 0;
+  margin-top: 1px;
 }
 
 /* ================================================
-   INPUTS
+   FORMULÁRIO
    ================================================ */
 
-.input-group {
-  margin-bottom: 1.5rem;
+.form-group {
+  margin-bottom: var(--spacing-lg);
 }
 
-.input-group label {
+.form-label {
   display: block;
-  position: relative;
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-sm);
+  cursor: pointer;
 }
 
-.input-group .icon {
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-icon {
   position: absolute;
-  left: 15px;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 1.2rem;
-  color: #666;
+  left: 0.875rem;
+  width: 1.25rem;
+  height: 1.25rem;
+  color: var(--color-text-secondary);
+  pointer-events: none;
   z-index: 1;
 }
 
-.input-group input {
+.form-input {
   width: 100%;
-  padding: 1rem 1rem 1rem 3.2rem;
-  border: 2px solid #e0e0e0;
-  border-radius: 8px;
-  font-size: 1rem;
-  transition: all 0.3s ease;
-  background-color: #fafafa;
+  height: var(--input-height);
+  padding: 0.75rem 0.875rem 0.75rem 2.75rem;
+  font-size: var(--font-size-base);
+  font-family: inherit;
+  line-height: var(--line-height-base);
+  color: var(--color-text-primary);
+  background-color: var(--color-bg-input);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  transition: all var(--transition-fast);
+  -webkit-appearance: none;
+  appearance: none;
 }
 
-.input-group input:focus {
+.form-input::placeholder {
+  color: var(--color-text-secondary);
+  opacity: 0.7;
+}
+
+.form-input:hover:not(:disabled) {
+  border-color: var(--color-text-secondary);
+}
+
+.form-input:focus {
   outline: none;
-  border-color: #3b0000;
+  border-color: var(--color-border-focus);
+  box-shadow: var(--shadow-focus);
   background-color: white;
-  box-shadow: 0 0 0 3px rgba(59, 0, 0, 0.1);
 }
 
-.input-group input::placeholder {
-  color: #999;
+.form-input:disabled {
+  background-color: var(--color-bg-disabled);
+  color: var(--color-text-disabled);
+  cursor: not-allowed;
+}
+
+.form-input-error {
+  border-color: var(--color-error);
+}
+
+.form-input-error:focus {
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
+}
+
+.form-input-with-toggle {
+  padding-right: 3rem;
 }
 
 /* ================================================
-   BOTÕES E LINKS
+   TOGGLE DE SENHA
    ================================================ */
 
-.esqueci-senha {
-  display: block;
-  text-align: right;
-  margin-top: -0.5rem;
-  margin-bottom: 1.5rem;
-  color: #666;
-  font-size: 0.875rem;
-  text-decoration: none;
-  transition: color 0.3s;
-}
-
-.esqueci-senha:hover {
-  color: #3b0000;
-  text-decoration: underline;
-}
-
-.erro-mensagem {
-  background-color: #fee;
-  color: #c33;
-  padding: 0.9rem;
-  border-radius: 8px;
-  margin-bottom: 1rem;
-  font-size: 0.875rem;
-  border-left: 4px solid #c33;
-  animation: shake 0.3s;
-}
-
-@keyframes shake {
-  0%, 100% { transform: translateX(0); }
-  25% { transform: translateX(-5px); }
-  75% { transform: translateX(5px); }
-}
-
-.btn-entrar {
-  width: 100%;
-  padding: 1.1rem;
-  background-color: #3b0000;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  font-size: 1.1rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
+.password-toggle {
+  position: absolute;
+  right: 0.75rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
-  box-shadow: 0 4px 10px rgba(59, 0, 0, 0.3);
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0;
+  background: none;
+  border: none;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  border-radius: 0.375rem;
+  transition: all var(--transition-fast);
 }
 
-.btn-entrar:hover {
-  background-color: #210400;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 15px rgba(59, 0, 0, 0.4);
+.password-toggle:hover:not(:disabled) {
+  color: var(--color-text-primary);
+  background-color: var(--color-bg-page);
 }
 
-.btn-entrar:active {
+.password-toggle:focus {
+  outline: 2px solid var(--color-border-focus);
+  outline-offset: 2px;
+  color: var(--color-text-primary);
+}
+
+.password-toggle:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.password-toggle svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+/* ================================================
+   MENSAGENS DE ERRO
+   ================================================ */
+
+.form-error {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  margin-top: var(--spacing-sm);
+  font-size: var(--font-size-sm);
+  color: var(--color-error);
+  animation: slideDown var(--transition-base);
+}
+
+/* ================================================
+   OPÇÕES DO FORMULÁRIO
+   ================================================ */
+
+.form-options {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+  flex-wrap: wrap;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  cursor: pointer;
+  user-select: none;
+  min-height: 44px;
+}
+
+.checkbox-input {
+  width: 1.125rem;
+  height: 1.125rem;
+  cursor: pointer;
+  accent-color: var(--color-primary);
+}
+
+.checkbox-input:focus {
+  outline: 2px solid var(--color-border-focus);
+  outline-offset: 2px;
+}
+
+.checkbox-text {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-primary);
+}
+
+.link-forgot {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0.25rem;
+}
+
+.link-forgot:hover {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+
+.link-forgot:focus {
+  outline: 2px solid var(--color-border-focus);
+  outline-offset: 2px;
+  border-radius: 0.25rem;
+}
+
+/* ================================================
+   BOTÕES
+   ================================================ */
+
+.btn-primary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-sm);
+  width: 100%;
+  height: var(--button-height);
+  padding: 0 var(--spacing-lg);
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  font-family: inherit;
+  line-height: var(--line-height-base);
+  color: white;
+  background-color: var(--color-primary);
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background-color: var(--color-primary-hover);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-lg);
+}
+
+.btn-primary:active:not(:disabled) {
+  background-color: var(--color-primary-active);
   transform: translateY(0);
+  box-shadow: var(--shadow-sm);
 }
 
-.cadastro-link {
+.btn-primary:focus {
+  outline: 2px solid var(--color-border-focus);
+  outline-offset: 2px;
+}
+
+.btn-primary:disabled {
+  background-color: var(--color-text-disabled);
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.btn-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+/* ================================================
+   SPINNER
+   ================================================ */
+
+.spinner {
+  width: 1.25rem;
+  height: 1.25rem;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spinner-track {
+  opacity: 0.25;
+}
+
+.spinner-path {
+  opacity: 0.75;
+}
+
+/* ================================================
+   FOOTER DO FORMULÁRIO
+   ================================================ */
+
+.form-footer {
+  margin-top: var(--spacing-lg);
   text-align: center;
-  margin-top: 1.5rem;
-  color: #666;
-  font-size: 0.95rem;
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
 }
 
-.cadastro-link a {
-  color: #3b0000;
+.link-signup {
+  color: var(--color-primary);
   font-weight: 600;
   text-decoration: none;
-  transition: color 0.3s;
+  transition: color var(--transition-fast);
 }
 
-.cadastro-link a:hover {
+.link-signup:hover {
+  color: var(--color-primary-hover);
   text-decoration: underline;
-  color: #210400;
+}
+
+.link-signup:focus {
+  outline: 2px solid var(--color-border-focus);
+  outline-offset: 2px;
+  border-radius: 0.25rem;
 }
 
 /* ================================================
-   RESPONSIVIDADE - TABLET (481px até 1024px)
+   BRAND MOBILE
    ================================================ */
 
-@media (max-width: 1024px) {
+.login-brand-mobile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: var(--spacing-2xl);
+  padding-top: var(--spacing-xl);
+  border-top: 1px solid var(--color-border);
+}
+
+.brand-text {
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  color: var(--color-primary);
+  text-transform: uppercase;
+}
+
+/* ================================================
+   RESPONSIVIDADE - TABLET (768px)
+   ================================================ */
+
+@media (min-width: 768px) {
+  .login-form-section {
+    padding: var(--spacing-2xl) var(--spacing-xl);
+  }
+  
+  .login-title {
+    font-size: var(--font-size-2xl);
+  }
+  
+  .login-card {
+    padding: var(--spacing-2xl);
+  }
+}
+
+/* ================================================
+   RESPONSIVIDADE - DESKTOP (1024px)
+   ================================================ */
+
+@media (min-width: 1024px) {
   .login-container {
-    flex-direction: column;
+    flex-direction: row;
   }
-
-  .login-left {
-    min-height: 250px;
-    order: 1;
-    min-width: 100%;
+  
+  /* Seção de imagem - visível no desktop */
+  .login-image-section {
+    display: flex;
+    flex: 1;
+    min-height: 100dvh;
+    max-width: 50%;
+    background: linear-gradient(rgba(59, 4, 0, 0.65), rgba(59, 4, 0, 0.65)),
+                url('https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?w=1200&q=80') center/cover no-repeat;
+    position: sticky;
+    top: 0;
   }
-
-  .login-right {
-    order: 2;
-    padding: 2rem 1.5rem;
-    min-width: 100%;
+  
+  .login-image-overlay {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
   }
-
-  .logo-sanem {
-    font-size: 80px;
-    text-shadow: 2px 2px 5px rgba(0,0,0,0.6);
+  
+  .login-brand {
+    font-size: clamp(3rem, 8vw, 7rem);
+    font-weight: 800;
+    color: white;
+    text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.3);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin: 0;
   }
-
-  .titulo-boas-vindas {
-    font-size: 2rem;
+  
+  /* Seção do formulário */
+  .login-form-section {
+    flex: 1;
+    max-width: 50%;
   }
-
-  .login-card {
-    padding: 2.5rem 2rem;
-  }
-
-  .titulo-login {
-    font-size: 1.4rem;
-  }
-
-  .input-group input {
-    font-size: 1rem;
-    padding: 1rem 1rem 1rem 3.2rem;
-  }
-}
-
-/* ================================================
-   RESPONSIVIDADE - MOBILE (até 480px)
-   ================================================ */
-
-@media (max-width: 480px) {
-  .login-container {
-    flex-direction: column;
-  }
-
-  .login-left {
-    min-height: 180px;
-    order: 1;
-  }
-
-  .login-right {
-    order: 2;
-    padding: 1.5rem 1rem;
-  }
-
-  .logo-sanem {
-    font-size: 50px;
-    letter-spacing: 1px;
-  }
-
-  .titulo-boas-vindas {
-    font-size: 1.6rem;
-  }
-
-  .login-card {
-    padding: 2rem 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-  }
-
-  .titulo-login {
-    font-size: 1.2rem;
-    margin-bottom: 1.5rem;
-  }
-
-  .input-group {
-    margin-bottom: 1.2rem;
-  }
-
-  .input-group input {
-    padding: 0.9rem 0.9rem 0.9rem 3rem;
-    font-size: 0.95rem;
-    border-radius: 6px;
-  }
-
-  .input-group .icon {
-    font-size: 1.1rem;
-    left: 12px;
-  }
-
-  .esqueci-senha {
-    font-size: 0.8rem;
-    margin-bottom: 1.2rem;
-  }
-
-  .btn-entrar {
-    padding: 1rem;
-    font-size: 1rem;
-    border-radius: 6px;
-  }
-
-  .cadastro-link {
-    font-size: 0.85rem;
-    margin-top: 1.2rem;
-  }
-
-  .erro-mensagem {
-    padding: 0.75rem;
-    font-size: 0.8rem;
+  
+  /* Ocultar brand mobile */
+  .login-brand-mobile {
+    display: none;
   }
 }
 
 /* ================================================
-   RESPONSIVIDADE - MOBILE EXTRA SMALL (até 360px)
+   RESPONSIVIDADE - DESKTOP LARGE (1440px)
    ================================================ */
 
-@media (max-width: 360px) {
-  .logo-sanem {
-    font-size: 40px;
+@media (min-width: 1440px) {
+  .login-form-wrapper {
+    max-width: 480px;
   }
+}
 
-  .titulo-boas-vindas {
-    font-size: 1.3rem;
+/* ================================================
+   ACESSIBILIDADE - REDUCED MOTION
+   ================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
+}
 
-  .login-card {
-    padding: 1.5rem 1rem;
+/* ================================================
+   ACESSIBILIDADE - HIGH CONTRAST
+   ================================================ */
+
+@media (prefers-contrast: high) {
+  .form-input {
+    border-width: 2px;
   }
-
-  .titulo-login {
-    font-size: 1rem;
+  
+  .form-input:focus {
+    outline: 3px solid var(--color-border-focus);
+    outline-offset: 2px;
   }
+  
+  .btn-primary:focus {
+    outline-width: 3px;
+  }
+}
 
-  .input-group input {
-    padding: 0.8rem 0.8rem 0.8rem 2.8rem;
+/* ================================================
+   SAFE AREAS - iOS
+   ================================================ */
+
+@supports (padding: env(safe-area-inset-bottom)) {
+  .login-form-section {
+    padding-left: max(var(--spacing-md), env(safe-area-inset-left));
+    padding-right: max(var(--spacing-md), env(safe-area-inset-right));
+    padding-bottom: max(var(--spacing-lg), env(safe-area-inset-bottom));
+  }
+}
+
+/* ================================================
+   PERFORMANCE - FONT LOADING
+   ================================================ */
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: local('Inter'), local('Arial'), local('sans-serif');
+}
+
+/* ================================================
+   UTILITÁRIOS - PRINT
+   ================================================ */
+
+@media print {
+  .login-image-section,
+  .login-brand-mobile {
+    display: none;
   }
 }
