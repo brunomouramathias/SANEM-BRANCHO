@@ -56,50 +56,53 @@ const Login = () => {
       </div>
       
       <div className="login-right">
-        <div className="login-card">
-          <h1>Bem-vindo ao nosso Brechó!</h1>
-          <h2>Faça seu login</h2>
+        <div className="login-content">
+          <h1 className="titulo-boas-vindas">Bem-vindo ao nosso Brechó!</h1>
+          
+          <div className="login-card">
+            <h2 className="titulo-login">Faça seu login</h2>
 
-          <form onSubmit={handleSubmit}>
-            <div className="input-group">
-              <label htmlFor="usuario">
-                <i className="icon">👤</i>
-                <input
-                  type="text"
-                  id="usuario"
-                  name="usuario"
-                  placeholder="Nome do usuário"
-                  value={formData.usuario}
-                  onChange={handleChange}
-                />
-              </label>
-            </div>
+            <form onSubmit={handleSubmit}>
+              <div className="input-group">
+                <label htmlFor="usuario">
+                  <i className="icon">👤</i>
+                  <input
+                    type="text"
+                    id="usuario"
+                    name="usuario"
+                    placeholder="Nome do usuário"
+                    value={formData.usuario}
+                    onChange={handleChange}
+                  />
+                </label>
+              </div>
 
-            <div className="input-group">
-              <label htmlFor="senha">
-                <i className="icon">🔒</i>
-                <input
-                  type="password"
-                  id="senha"
-                  name="senha"
-                  placeholder="Senha"
-                  value={formData.senha}
-                  onChange={handleChange}
-                />
-              </label>
-              <a href="#" className="esqueci-senha">Esqueci minha senha</a>
-            </div>
+              <div className="input-group">
+                <label htmlFor="senha">
+                  <i className="icon">🔒</i>
+                  <input
+                    type="password"
+                    id="senha"
+                    name="senha"
+                    placeholder="Senha"
+                    value={formData.senha}
+                    onChange={handleChange}
+                  />
+                </label>
+                <a href="#" className="esqueci-senha">Esqueci minha senha</a>
+              </div>
 
-            {erro && <p className="erro-mensagem">{erro}</p>}
+              {erro && <p className="erro-mensagem">{erro}</p>}
 
-            <button type="submit" className="btn-entrar">
-              Entrar →
-            </button>
-          </form>
+              <button type="submit" className="btn-entrar">
+                Entrar →
+              </button>
+            </form>
 
-          <p className="cadastro-link">
-            Não tem conta? <a href="/cadastro">Cadastre-se</a>
-          </p>
+            <p className="cadastro-link">
+              Não tem conta? <a href="/cadastro">Cadastre-se</a>
+            </p>
+          </div>
         </div>
       </div>
     </div>

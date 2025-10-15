@@ -4,6 +4,38 @@ Todas as mudanças importantes do projeto serão documentadas aqui.
 
 ---
 
+## [15/10/2025] - Correção de Layout de Login Desktop
+
+### 🐛 Corrigido
+
+#### Tela de Login Distorcida no Desktop
+- **Problema**: Layout não respeitava 50/50, título sendo cortado
+- **Solução**: Reestruturação do HTML e CSS
+  - Criado container `.login-content` para melhor organização
+  - Título "Bem-vindo ao nosso Brechó!" movido para fora do card
+  - Adicionado `min-width: 50%` em ambos os lados
+  - Novos estilos: `.titulo-boas-vindas` e `.titulo-login`
+
+#### Ajustes de Responsividade
+- Tamanhos de fonte atualizados para todos os breakpoints
+- Desktop: 2.5rem (título principal)
+- Tablet: 2rem
+- Mobile: 1.6rem
+- Extra Small: 1.3rem
+
+### 📚 Documentação
+- ✅ Criado `CORRECAO_LAYOUT_LOGIN.md` com:
+  - Explicação detalhada do problema
+  - Soluções implementadas
+  - Comparação visual ANTES/DEPOIS
+  - Guia de testes
+  - Checklist de validação
+
+### 📦 Commits
+- `fix: Corrige layout distorcido da tela de login no desktop` (pendente)
+
+---
+
 ## [08/10/2025] - Breakpoints Responsivos Profissionais
 
 ### ✅ Adicionado
