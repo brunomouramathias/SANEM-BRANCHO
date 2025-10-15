@@ -1,0 +1,70 @@
+═══════════════════════════════════════════════════════════
+  🔥 FORÇAR REBUILD NO NETLIFY - PASSO A PASSO
+═══════════════════════════════════════════════════════════
+
+✅ CONFIRMADO:
+   - GitHub TEM os 3 commits corretos
+   - Commit 2f0e5ae (correção do layout) ESTÁ no GitHub
+   - Arquivos Login.jsx e Login.css estão CORRETOS no GitHub
+
+❌ PROBLEMA:
+   - Netlify deployou às 11:07 PM MAS com código antigo
+   - O build usou cache velho ou falhou silenciosamente
+   - Site ainda mostra layout antigo
+
+🔧 SOLUÇÃO: FORÇAR REBUILD LIMPO
+═══════════════════════════════════════════════════════════
+
+Na página do Netlify que acabou de abrir:
+
+📍 PASSO 1: Verificar Deploy Atual
+   ▶ Veja se o deploy das 11:07 PM está marcado como "Published"
+   ▶ Clique nele para ver os detalhes
+
+📍 PASSO 2: Forçar Rebuild (IMPORTANTE!)
+   ▶ Clique no botão: "Trigger deploy" (canto superior direito)
+   ▶ Selecione: "Clear cache and deploy site"
+   ▶ CONFIRME a ação
+
+📍 PASSO 3: Aguardar Build
+   ▶ Status vai mudar para: 🟡 "Building..."
+   ▶ Aguarde 2-3 minutos
+   ▶ Quando aparecer: 🟢 "Published" = PRONTO!
+
+📍 PASSO 4: Testar (FORCE RELOAD!)
+   ▶ Feche TODAS as abas do site
+   ▶ Abra nova aba ANÔNIMA
+   ▶ Acesse: https://sistema-sanem.netlify.app/login
+   ▶ Pressione: Ctrl + Shift + R (force reload)
+
+═══════════════════════════════════════════════════════════
+
+✅ RESULTADO ESPERADO:
+
+Desktop:
+┌─────────────────┬─────────────────┐
+│                 │                 │
+│     SANEM       │  Bem-vindo ao   │  ← TÍTULO GRANDE
+│   (Imagem)      │  nosso Brechó!  │     NO TOPO!
+│                 │                 │
+│                 │  ┌───────────┐  │
+│                 │  │Faça login │  │  ← CARD ABAIXO
+│                 │  │[Inputs]   │  │
+│                 │  └───────────┘  │
+└─────────────────┴─────────────────┘
+      50%               50%
+
+═══════════════════════════════════════════════════════════
+
+⏱️ TEMPO TOTAL: 3-5 MINUTOS
+
+🚨 MUITO IMPORTANTE:
+   ▶ Use "Clear cache and deploy" (NÃO só "Deploy site")
+   ▶ Aguarde até ver 🟢 "Published"
+   ▶ Force reload (Ctrl+Shift+R) no navegador
+   ▶ Teste em aba anônima
+
+═══════════════════════════════════════════════════════════
+
+ME AVISE QUANDO O NOVO BUILD TERMINAR!
+

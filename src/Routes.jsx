@@ -1,4 +1,8 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+
+// Páginas de autenticação
+import Login from "./pages/Auth/Login";
+import Cadastro from "./pages/Auth/Cadastro";
 
 // Páginas principais
 import Home from "./pages/Home/index";
@@ -24,6 +28,10 @@ export function AppRoutes() {
   return (
     <Router>
       <Routes>
+        {/* Rotas de autenticação */}
+        <Route path="/login" element={<Login />} />
+        <Route path="/cadastro" element={<Cadastro />} />
+
         {/* Página inicial */}
         <Route path="/" element={<Home />} />
 
@@ -45,6 +53,9 @@ export function AppRoutes() {
 
         {/* Rota de relatórios */}
         <Route path="/relatorios" element={<Relatorios />} />
+
+        {/* Redireciona qualquer rota desconhecida para home */}
+        <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </Router>
   );
