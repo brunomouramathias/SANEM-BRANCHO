@@ -1,0 +1,106 @@
+================================================================================
+                    DIVISAO DA APRESENTACAO - SISTEMA SANEM
+================================================================================
+
+TOTAL: 8 slides (2 slides por pessoa)
+
+
+================================================================================
+BRUNO MOURA MATHIAS - Slides 5 e 8 (MAIS FACIL)
+================================================================================
+Tempo: ~3 minutos
+
+SLIDE 5 - Funcionalidades que ja existiam
+O QUE FALAR:
+- "O projeto que assumimos ja tinha algumas coisas prontas"
+- "Tinha tela de login, cadastro de beneficiarios e a interface"
+- "O menu de navegacao ja funcionava"
+
+SLIDE 8 - Conclusao
+O QUE FALAR:
+- "O sistema esta pronto para uso pela instituicao SANEM"
+- "Nossa equipe foi: Gabriel, Joao Pedro, Natan e eu, Bruno"
+- "Obrigado pela atencao. Alguma pergunta?"
+
+POR QUE E MAIS FACIL: Sao slides simples, so precisa listar o que ja existia
+e no final agradecer. Nao precisa explicar nada tecnico.
+
+
+================================================================================
+GABRIEL VIEIRA MORENO - Slides 1 e 2
+================================================================================
+Tempo: ~3 minutos
+
+SLIDE 1 - Banco de Dados
+O QUE FALAR:
+- "Usamos MySQL como banco de dados"
+- "O sistema tem 9 tabelas"
+- "As principais sao: Beneficiario, Operador, Estoque e Doacoes"
+
+SLIDE 2 - Arquitetura
+O QUE FALAR:
+- "O sistema NAO e monolitico"
+- "O frontend e backend sao separados"
+- "O usuario acessa pelo navegador, que fala com o servidor, que acessa o banco"
+
+
+================================================================================
+JOAO PEDRO DOMINGUES - Slides 3 e 4
+================================================================================
+Tempo: ~3 minutos
+
+SLIDE 3 - Como executar
+O QUE FALAR:
+- "Para rodar precisa ter Node.js e MySQL instalados"
+- "E so instalar as dependencias e iniciar"
+- "O frontend roda na porta 5173, o backend na 3001"
+
+SLIDE 4 - Tecnologias
+O QUE FALAR:
+- "No backend usamos Node.js com Express"
+- "O banco e MySQL"
+- "No frontend usamos React"
+- "O CSS deixa o sistema bonito e responsivo"
+
+
+================================================================================
+NATAN PEREIRA SANTOS - Slides 6 e 7
+================================================================================
+Tempo: ~3 minutos
+
+SLIDE 6 - O que a equipe fez
+O QUE FALAR:
+- "Nossa equipe conectou o frontend com o backend"
+- "Criamos o registro de doacoes"
+- "Implementamos a distribuicao aos beneficiarios"
+- "O estoque atualiza automaticamente"
+
+SLIDE 7 - Proximos passos
+O QUE FALAR:
+- "Para continuar o projeto, sugerimos:"
+- "Adicionar graficos na tela inicial"
+- "Criar avisos quando estoque estiver baixo"
+- "Fazer uma versao para celular"
+
+
+================================================================================
+                         ORDEM DA APRESENTACAO
+================================================================================
+
+1. GABRIEL    -> Slide 1 (Banco) e Slide 2 (Arquitetura)
+2. JOAO PEDRO -> Slide 3 (Ambiente) e Slide 4 (Tecnologias)  
+3. NATAN      -> Slide 6 (O que fizemos) e Slide 7 (Futuro)
+4. BRUNO      -> Slide 5 (O que ja tinha) e Slide 8 (Conclusao)
+
+Obs: Bruno apresenta o slide 5 antes do 8, entao ele fala no meio
+e no final da apresentacao.
+
+
+================================================================================
+                              DICAS
+================================================================================
+- Falar de forma natural, sem decorar
+- Se nao souber responder algo, diga "vou verificar com a equipe"
+- Cada um fala cerca de 3 minutos
+- Total da apresentacao: ~12 minutos
+================================================================================

@@ -1,0 +1,117 @@
+================================================================================
+            SCRIPT PARA O GAMMA APP - SISTEMA SANEM
+================================================================================
+
+Crie uma apresentacao com 8 slides sobre um sistema de gestao de doacoes. Design clean e profissional, cores neutras (azul escuro, branco, cinza). NAO use imagens de pessoas. Use apenas icones simples quando necessario.
+
+---
+
+SLIDE 1: Banco de Dados
+Titulo: Banco de Dados MySQL
+
+O sistema utiliza MySQL com 9 tabelas:
+- Beneficiario (quem recebe doacoes)
+- Operaor (usuarios do sistema)
+- Estoque (itens disponiveis)
+- Tipo (categorias de itens)
+- Doacao_Recebida (entrada de doacoes)
+- Doacao_Enviada (saida/distribuicao)
+- Login_Logout (controle de acesso)
+- 2 tabelas de relacionamento
+
+Visual: diagrama simples com caixas conectadas
+
+---
+
+SLIDE 2: Arquitetura
+Titulo: Arquitetura do Sistema
+
+NAO eh monolitico. Frontend e Backend separados.
+
+Frontend (Interface) -> API -> Backend (Servidor) -> Banco de Dados
+
+O usuario acessa pelo navegador, que se comunica com o servidor, que acessa o banco.
+
+---
+
+SLIDE 3: Ambiente de Execucao
+Titulo: Como Executar
+
+Requisitos:
+- Node.js instalado
+- MySQL instalado
+- Navegador web
+
+Passos:
+1. Instalar dependencias (npm install)
+2. Criar banco de dados
+3. Iniciar o sistema
+
+---
+
+SLIDE 4: Tecnologias
+Titulo: Tecnologias Utilizadas
+
+Backend (Servidor):
+- Node.js (executa JavaScript no servidor)
+- Express (organiza as rotas da API)
+- MySQL (banco de dados)
+- Sistema de login com senha criptografada
+
+Frontend (Interface):
+- React (cria as telas do sistema)
+- CSS moderno (deixa bonito e responsivo)
+- Navegacao entre paginas
+
+---
+
+SLIDE 5: Funcionalidades Existentes
+Titulo: O que o Projeto Ja Tinha
+
+Herdado do projeto anterior:
+- Tela de login
+- Cadastro de beneficiarios
+- Cadastro de tipos de itens
+- Interface responsiva
+- Menu de navegacao
+
+---
+
+SLIDE 6: Funcionalidades Implementadas
+Titulo: O que Nossa Equipe Fez
+
+Implementamos:
+- Conexao do frontend com o backend
+- Registro de doacoes que chegam
+- Distribuicao de doacoes aos beneficiarios
+- Atualizacao automatica do estoque
+- Tela inicial com resumo geral
+- Relatorios por data
+
+---
+
+SLIDE 7: Perspectivas Futuras
+Titulo: Proximos Passos
+
+Para continuar o projeto:
+- Graficos na tela inicial
+- Avisos quando estoque estiver baixo
+- Versao para celular
+- Impressao de comprovantes
+- Backup automatico dos dados
+
+---
+
+SLIDE 8: Conclusao
+Titulo: Equipe
+
+Bruno Moura Mathias Fernandes Simao
+Gabriel Vieira Moreno
+Joao Pedro Domingues
+Natan Pereira Santos
+
+Sistema pronto para uso pela instituicao SANEM.
+
+================================================================================
+INSTRUCOES: Cole no gamma.app, escolha tema profissional, desative imagens de pessoas
+================================================================================
